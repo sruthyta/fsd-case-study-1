@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+    <head>
+        <title>login</title>
+    </head>
+<body>
+
+    <form>
+        <h2 style="margin-left: 40%; margin-top: 10%;" >To do list Login</h2><br>
+        <input type="text" placeholder="Username" id="text1"  style="margin-left: 40%;"/><br /><br>
+        <input type="password" placeholder="Password" id="text2" style="margin-left: 40%;"/><br /><br>
+        <input type="button" value="Login"  onclick="javascript:validate()" style="margin-left: 44%;"/>
+    </form>
+    <script type="text/javascript">
+    function validate()
+    {
+        if(   document.getElementById("text1").value == "admin"
+           && document.getElementById("text2").value == "12345" )
+        {
+            alert( "validation succeeded" );
+            // location.href="to do list.html";
+            location.replace("http://127.0.0.1:5501/to%20do%20list%201.html")
+        }
+        else
+        {
+            alert( "validation failed" );
+            // location.href="fail.html";
+        }
+    }
+    </script>
+</body>
+</html>
